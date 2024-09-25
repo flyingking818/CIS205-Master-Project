@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>CIS205_Master_Project</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Assignments\**" />
+    <Compile Remove="Demos\**" />
+    <Compile Remove="Tests\**" />
+    <EmbeddedResource Remove="Assignments\**" />
+    <EmbeddedResource Remove="Demos\**" />
+    <EmbeddedResource Remove="Tests\**" />
+    <None Remove="Assignments\**" />
+    <None Remove="Demos\**" />
+    <None Remove="Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Demos\Module2\EggsInteractive.cs" />
+  </ItemGroup>
+
+</Project>
