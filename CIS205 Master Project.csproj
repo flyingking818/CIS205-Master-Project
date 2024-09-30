@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Demos\Module2\EggsInteractive.cs" />
+    <Compile Include="Demos\Module3\GuessingGame.cs" />
   </ItemGroup>
 
 </Project>
