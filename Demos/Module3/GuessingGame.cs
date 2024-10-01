@@ -50,7 +50,7 @@ namespace CIS205_Master_Project.Demos.Module3
                 else
                     WriteLine("Correct! :)");
 
-            //Option 2 - if..elseif...else block (more efficient!)
+            //Option 2 - if..else if...else block (more efficient!)
             if (guess > randomNum)
                 WriteLine("Too high!");
             else if (guess < randomNum)
