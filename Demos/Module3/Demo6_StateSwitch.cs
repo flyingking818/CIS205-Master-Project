@@ -1,9 +1,18 @@
 /*
 Business rules:
-Give discounts based on different states. For Flagler College students, special discount is available.
+Give discounts based on different states. For Flagler College students, 
+special discount is available.
  
- Pay special attention to the nested if in switch statements.
+Pay special attention to the nested if in switch statements.
+
+Development ideas:
+Factor: State
+>>>>Factor: isFlagler
+
+Switch (State)
+
  */
+
 
 using System;
 using static System.Console;
@@ -40,7 +49,7 @@ class StateDiscount
                     discountState = 0.10;
                 }
                 break;
-            case "CO":
+            case "CO":  //this is the "OR" logic
             case "GA":
                 discountState = 0.08;
                 break;
@@ -65,11 +74,4 @@ class StateDiscount
     }
 }
 
-/*
- Development ideas:
-Factor: State
->>>>Factor: isFlagler
 
-Switch (State)
-
- */

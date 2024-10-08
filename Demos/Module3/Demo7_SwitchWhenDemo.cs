@@ -5,7 +5,8 @@
 16-100
 101 or above 
 
-Pay speecial attention to the conditional "case when" statements, which is new since C#7.0
+Pay speecial attention to the conditional "case when" statements, 
+which is new since C#7.0
  */
 
 
@@ -18,6 +19,7 @@ class SwitchWhenDemo
         int age;
         Write("Enter your age >> ");
         age = Convert.ToInt32(ReadLine());
+
         switch (age)
         {
             case int i when i >= 1 && i <= 8:
@@ -34,5 +36,39 @@ class SwitchWhenDemo
                 break;
         }
 
+
+        //Huricane Option 3
+        const int CAT1 = 74;
+        const int CAT2 = 96;
+        const int CAT3 = 111;
+        const int CAT4 = 130;
+        const int CAT5 = 157;
+
+
+        int windSpeed;
+        Write("Enter your wind speed: ");
+        windSpeed = Convert.ToInt32(ReadLine());
+
+        switch (windSpeed)
+        {
+            case int i when i >= CAT5:
+                WriteLine("Category 5!");
+                break;
+            case int i when i >= CAT4 && i<CAT5:
+                WriteLine("Category 4!");
+                break;
+            case int i when i >= CAT3 && i<CAT4:
+                WriteLine("Category 3!");
+                break;
+            case int i when i >= CAT2 && i<CAT3:
+                WriteLine("Category 2!");
+                break;
+            case int i when i >= CAT1 && i<CAT2:
+                WriteLine("Category 1!");
+                break;
+            default:
+                WriteLine("This is not a hurricane.");
+                break;
+        }
     }
 }
