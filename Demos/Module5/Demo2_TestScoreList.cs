@@ -15,6 +15,7 @@ class TestScoreList
         int testNum;
         double total = 0;
         double avg;
+
         for (testNum = 0; testNum < scores.Length; ++testNum)
         {
             Write("Please enter score for test number {0} >> ", (testNum + 1));
@@ -22,6 +23,7 @@ class TestScoreList
             total += scores[testNum];
         }
         avg = total / scores.Length;
+
         WriteLine("Scores for the tests are:");
         for (testNum = 0; testNum < scores.Length; ++testNum) 
         { 
