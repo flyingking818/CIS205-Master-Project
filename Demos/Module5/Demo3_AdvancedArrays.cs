@@ -5,6 +5,8 @@ class AdvancedArrays
 
     static void Main()
     {
+        /*
+       
         //=============Parallel Arrays and Search Techniques================
 
         //1. Paralles arrays delcaration and intialization
@@ -72,16 +74,20 @@ class AdvancedArrays
         else
             WriteLine("Sorry, item not found");
 
+  
 
         /*
          Multi- dimensional array. 
          In a rectangular array, each row has the same number of columns.Think of this as a table.
-        */
+        
+         If you need n dimensional array, you would need n-1 commas in the declaration.
+         
+         */
         int[,] rents = {
-            {400, 500, 510 },
+            {400, 500, 510 },      
             {500, 560, 630 },
             {625, 676, 740 },
-            {10000, 1250, 1600 }
+            {1000, 1250, 1600 }
         };
 
         int floor;
@@ -89,13 +95,15 @@ class AdvancedArrays
         string inputString;
 
         WriteLine("Enter the floor on which you want to live");
-        inputString = ReadLine();
+        //inputString = ReadLine();
         floor = Convert.ToInt32(ReadLine());
         WriteLine("Enter the number of rooms you need");
-        inputString = ReadLine();
+        //inputString = ReadLine();
         bedrooms = Convert.ToInt32(ReadLine());
 
-        WriteLine("The rent is {0}", rents[floor, bedrooms]);
+        WriteLine("The rent is {0}", rents[floor-1, bedrooms-1]);
+
+        //Can you use this for the challenge project? ;)
 
         //Here's another example of rectangular array 3x4
         double[,] sales = {

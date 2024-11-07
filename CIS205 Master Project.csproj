@@ -25,7 +25,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Demos\Module5\ChatAWhile.cs" />
+    <Compile Include="Demos\Module6\SalesLetter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Demos\Module5\" />
   </ItemGroup>
 
 </Project>

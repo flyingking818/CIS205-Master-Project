@@ -1,8 +1,10 @@
 /*
-    Write a program named TestScoreList that accepts eight int values representing student test scores. 
-    Display each of the values along with a message that indicates how far it is from the average. 
- */
+    Write a program named TestScoreList that accepts eight int values 
+    representing student test scores. 
 
+    Display each of the values along with a message that indicates how far 
+    it is from the average. 
+ */
 
 
 using System;
@@ -19,7 +21,7 @@ class TestScoreList
         for (testNum = 0; testNum < scores.Length; ++testNum)
         {
             Write("Please enter score for test number {0} >> ", (testNum + 1));
-            scores[testNum] = Convert.ToInt32(ReadLine());
+            scores[testNum] = Convert.ToInt32(ReadLine()); //Here, we assign the input value
             total += scores[testNum];
         }
         avg = total / scores.Length;
