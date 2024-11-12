@@ -37,7 +37,6 @@ public class FineForOverdueBooks
            books, days, fine.ToString("C", CultureInfo.GetCultureInfo("en-US")));
     }
 
-
     /*===========Alternative Solution=================
    
     Create a method a calculate the fine and return it back to the Main(). Then display it in the main.
@@ -72,9 +71,6 @@ public class FineForOverdueBooks
     return fine;
  }
     */
-
-
-
 
 }
 

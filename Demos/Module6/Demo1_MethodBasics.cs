@@ -43,7 +43,14 @@ class MethodBasics
         // The terms argument and parameter are closely related.
         //An argument is data in a method call, and a parameter is in the method header
 
-        DisplaySalesTax(1000.00);
+        double saleAmount = 1000;
+
+        DisplaySalesTax(saleAmount);  //1000 is an example of argument.
+
+        //Alternative - separation of concerns 
+        
+        double taxAmount = CalculateTaxAmount(saleAmount);
+        WriteLine("The tax on {0} is {1}\n", saleAmount.ToString("C"), taxAmount.ToString("C"));
 
     }
       
@@ -62,16 +69,30 @@ class MethodBasics
     }
 
     private static void DisplaySalesTax(double saleAmount)  //parameter
+        //void - means no return value (no recommended if you have display instructions
+        
+        //ByVal - makes a copy!
+        //ByRef - hand over the orginal box (address)
     {
-        double tax;
+        double taxAmount;
         const double RATE = 0.07;
-
-        tax = saleAmount * RATE;
-        WriteLine("The tax on {0} is {1}\n", saleAmount.ToString("C"), tax.ToString("C"));
+        
+        taxAmount = saleAmount * RATE;
+        WriteLine("The tax on {0} is {1}\n", saleAmount.ToString("C"), taxAmount.ToString("C"));
         //don't do the display in a sub method! For other UI programs, the sub methods does not have
         //access to the UI layer. 
 
     }   
+
+    private static double CalculateTaxAmount(double saleAmount)
+    {
+        double taxAmount;
+        const double RATE = 0.07;
+
+        taxAmount = saleAmount * RATE;
+
+        return taxAmount;
+    }
 
 }
 

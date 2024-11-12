@@ -25,11 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Demos\Module6\SalesLetter.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Demos\Module5\" />
+    <Compile Include="Demos\Module6\Admission.cs" />
+    <Compile Include="Demos\Module6\Demo1_MethodBasics.cs" />
   </ItemGroup>
 
 </Project>
