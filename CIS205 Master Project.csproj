@@ -26,7 +26,6 @@
 
   <ItemGroup>
     <Compile Include="Demos\Module6\Admission.cs" />
-    <Compile Include="Demos\Module6\Demo1_MethodBasics.cs" />
   </ItemGroup>
 
 </Project>

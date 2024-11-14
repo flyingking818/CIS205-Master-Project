@@ -4,13 +4,12 @@ using System.Globalization;
 using System.ComponentModel.Design;
 class Admission
 {
-
+ 
     static void Main()
     {
         // Write your code here
 
-        const double MIN_GPA = 3.0;
-        const int ADMIN1 = 60, ADMIN2 = 80;
+       
 
         double gpa;
         int testScore;
@@ -22,6 +21,7 @@ class Admission
         Write("Please enter test score: ");
         testScore = Convert.ToInt32(ReadLine());
 
+        /*
         //Processing 
         //Option 1: Nested IFs.
         if (gpa >= MIN_GPA)
@@ -39,17 +39,32 @@ class Admission
 
         //hint: put these into a black box and ask users to supply the inputs! :)
         //return the verdict!
+        */
 
+        string result = EvaluateStudent(gpa, testScore);
+
+        WriteLine(result);
+
+
+
+    }
+
+
+    public static string EvaluateStudent(double gpa, int testScore)
+    {
+        const double MIN_GPA = 3.0;
+        const int ADMIN1 = 60, ADMIN2 = 80;
+        string verdict ="";
 
         if ((gpa >= MIN_GPA && testScore >= ADMIN1) || (gpa < MIN_GPA && testScore >= ADMIN2))
         {
-            WriteLine("Accept");
+            verdict = "Accept";
         }
         else
         {
-            WriteLine("Reject");
+            verdict = "Reject";
         }
 
-
+        return verdict;
     }
 }

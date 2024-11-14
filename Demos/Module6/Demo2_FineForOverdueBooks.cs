@@ -20,7 +20,8 @@ public class FineForOverdueBooks
         books = Convert.ToInt32(ReadLine());
         Write("Enter number of days that the {0} books are overdue >> ", books);
         days = Convert.ToInt32(ReadLine());
-        DisplayFine(books, days);
+
+        DisplayFine(books, days);  //values passed in are callled arguments!
     }
     public static void DisplayFine(int books, int days)
     {
@@ -28,14 +29,17 @@ public class FineForOverdueBooks
         const double FINE2 = 0.20;
         const int DAY_FINE_INCREASES = 7;
         double fine;
+
+        //Main algorithm! Make sure the rules are correct! 
         if (days <= DAY_FINE_INCREASES)
             fine = books * days * FINE1;
         else
             fine = books * FINE1 * DAY_FINE_INCREASES +
                books * FINE2 * (days - DAY_FINE_INCREASES);
+
         WriteLine("The fine for {0} book(s) for {1} day(s) is {2}",
            books, days, fine.ToString("C", CultureInfo.GetCultureInfo("en-US")));
-    }
+    }  //the transient variables in the header are called parameters
 
     /*===========Alternative Solution=================
    
@@ -54,7 +58,11 @@ public class FineForOverdueBooks
 
     bookFine = CalculateFine(books, days);
 
-    WriteLine($"The fine for {books} book(s) for {days} day(s) is {bookFine.ToString("C")}.");        
+    //WriteLine($"The fine for {books} book(s) for {days} day(s) is {bookFine.ToString("C")}.");  
+    
+    CreateAFancyReport(bookFine);
+
+
   }
  public static double CalculateFine(int books, int days)
  {
