@@ -25,7 +25,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Demos\Module6\Admission.cs" />
+    <Compile Include="Demos\Module7\Demo1_ClassBasics.cs" />
+    <Compile Include="Demos\Module7\TestSoccerPlayer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Demos\Module7\Module7 Demo Source Codes.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Demos\Module6\" />
   </ItemGroup>
 
 </Project>

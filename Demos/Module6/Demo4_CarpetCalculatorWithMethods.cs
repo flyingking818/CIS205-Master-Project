@@ -29,9 +29,13 @@ namespace CarpetCalculatorWithMethods
             //4. Get the carpet unit price (double)
             carpetUnitPrice = GetCarpetUnitPrice();
 
+            //Alternative - add another method to CalculateTotalCost()
+            double totalCost = DetermineCarpetCost(roomLength, roomWidth);
 
             //5. Display results (=>5.1 Calculate Carpet Cost(double)) (void)
-            DisplayResults(roomAreaInSquareYard, carpetUnitPrice);
+            DisplayResults(roomAreaInSquareYard, carpetUnitPrice, totalCost);
+
+            EmailResults(roomAreaInSquareYard, carpetUnitPrice, totalCost);
 
 
         }
@@ -103,12 +107,12 @@ namespace CarpetCalculatorWithMethods
             return (numberUnitPrice);
         }
 
-        static void DisplayResults(double roomArea, double unitPrice)
+        static void DisplayResults(double roomArea, double unitPrice, double totalPrice) //?
         {
             Clear();
             WriteLine("Square Yards Needed: {0:N2}", roomArea);
             WriteLine("Carpet Unit Cost: {0:C}", unitPrice);
-            WriteLine("Total cost of carpet: {0:C}", DetermineCarpetCost(roomArea, unitPrice));
+            WriteLine("Total cost of carpet: {0:C}",totalPrice);
             ReadKey();
 
         }
